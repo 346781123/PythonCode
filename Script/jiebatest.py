@@ -13,3 +13,24 @@ print(", ".join(seg_list))
 
 seg_list = jieba.cut_for_search("小明硕士毕业于中国科学院计算所，后在日本京都大学深造")  # 搜索引擎模式
 print(", ".join(seg_list))
+
+
+# from django.shortcuts import render
+#
+# # Create your views here.
+# from django.http import HttpResponse
+# import jieba
+# import json
+#
+#
+# def index(request):
+#     return HttpResponse("Hello, world. You're at the polls index.")
+#
+#
+# def fenci(request):
+#     content = request.GET.get('content')
+#     seg_list = jieba.cut(content)
+#     strdata = ".".join(seg_list)
+#     array = strdata.split('.')
+#     data = [{'status': 1, 'dict': array}]
+#     return HttpResponse("Full Mode: " + json.dumps(data))
